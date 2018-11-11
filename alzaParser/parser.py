@@ -91,14 +91,14 @@ for cat in categories:
         try:
             location = (r.history[0]).headers['Location']
             # exist location -> there was a redirection
-            if link != location:
-                link = location
-                link = link.replace('.htm', '-p%d.htm')
-                link = link % (page)
+            link = location 
         except IndexError:
+            pass
             # no redirection
-            link = link.replace('.htm', '-p%d.htm')
-            link = link % (page)
+            
+        link = link.replace('.htm', '-p%d.htm')
+        link = link % (page)
+
 
         print(link)
 
