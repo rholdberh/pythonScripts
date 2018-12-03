@@ -26,7 +26,7 @@ def get_count_for_table(table):
         password="pass"
     )
 
-    select = "SELECT COUNT(*) FROM SLTBIECC.%s" % (table)
+    select = "SELECT COUNT(*) FROM %s" % (table)
     cursor = connection.cursor()
     cursor.execute(select)
     result = cursor.fetchone()[0]
