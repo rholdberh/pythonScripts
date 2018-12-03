@@ -55,7 +55,7 @@ def write_file(table_name, value):
 
 
 def get_write_counts():
-    tables = ["CHVW", "COMH"]
+    tables = ["AAAA", "BBBB"]
 
     for table in tables:
         count = get_count_for_table(table)
